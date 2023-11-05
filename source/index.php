@@ -1,11 +1,16 @@
 <?php include "includes/header.php" ?>
+<?php include "lib/function.php" ?>
 <main>
 <?php 
 
-$blogs = file_get_contents('blog/blog.json');
-$blog_data = json_decode($blogs,true);
+$page = 0;
 
-foreach($blog_data as $blog){
+if(isset($_GET['page'])) $page =  htmlspecialchars($_GET['page']) ;
+
+$blogs = isset($chunks[$page]) ? $chunks[$page] : null;
+
+if(!empty($blogs)){
+ foreach($blogs as $blog){
   $draft = $blog['draft'] ?? false;
 
   if($draft == false){
@@ -27,6 +32,10 @@ foreach($blog_data as $blog){
    echo $template;
   }
 }
+}else{
+  header("Location: 404.php");
+}
+
 
 ?>
 <?php include "includes/pagination.php" ?>

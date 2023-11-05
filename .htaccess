@@ -1,1 +1,8 @@
+RewriteEngine On
 
+# Server Source Index
+RewriteRule ^$ /blogga/source/index.php [L]
+
+# Redirect All Request To Source
+RewriteCond %{REQUEST_URI} !^/blogga/source/
+RewriteRule ^(.*)$ /blogga/source/$1 [L]
