@@ -22,10 +22,10 @@ if(!empty($blogs)){
 
    $template = "
       <article class='blog-post'>
-        <h2 class='post-title'><a href='read.php?title=$link'>$title</a></h2>
+        <h2 class='post-title'><a href='read?title=$link'>$title</a></h2>
         <p class='post-description'>$description</p>
         <p class='post-date'>Published on $date</p>
-        <a class='read-more-link' href='read.php?title=$link'>Read More</a>
+        <a class='read-more-link' href='read?title=$link'>Read More</a>
       </article>
    ";
    

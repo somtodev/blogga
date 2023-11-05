@@ -21,7 +21,7 @@ foreach($random as $post){
     echo "<article class='post-card'>
     <h1>$post[title]</h1>
     <p>$post[description]</p>
-    <a href='read.php?title=$link'>Read More</a>
+    <a href='read?title=$link'>Read More</a>
     </article>";
 }
 

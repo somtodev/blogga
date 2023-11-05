@@ -1,8 +1,22 @@
+# Enables Restricted Functionality On Some Hosting Platform
+Options +Multiviews
+
+# Remove Extensions
 RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
 
 # Server Source Index
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
 RewriteRule ^$ /blogga/source/index.php [L]
 
 # Redirect All Request To Source
 RewriteCond %{REQUEST_URI} !^/blogga/source/
 RewriteRule ^(.*)$ /blogga/source/$1 [L]
+
+# Redirect All PHP Extensions To Non-Extensions
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.php[\s?] [NC]
+RewriteRule ^ /%1 [R=301,NE,L]
+
+# Error Pages
+ErrorDocument 404 /blogga/404.php
+ErrorDocument 404 /blogga/500.php
