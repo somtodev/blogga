@@ -9,6 +9,7 @@
 .blog-content p > code,
 .blog-content pre > code {
   padding: 0.15rem 0.45rem;
+  color: var(--light);
   font-family: "Courier New", Courier, monospace;
   font-weight: 500;
   background: var(--secondary-color);

@@ -15,7 +15,6 @@ $blog = current($found) ?? null;
 $title = 'Blogga: '.$blog['title'];
 include 'includes/header.php';
 
-
 ?>
 
 <!DOCTYPE html>
