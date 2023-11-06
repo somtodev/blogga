@@ -24,10 +24,11 @@ include 'includes/header.php';
   <title>Blogga: $title</title>
   <link rel='stylesheet' href='static/css/main.css' />
   <link rel='stylesheet' href='static/css/blog.css' />
+  <link rel='stylesheet' href='static/css/markdown.css' />
   <script defer src="static/js/main.js"></script>
 </head>
 <body id='top'>
-<main>
+<main class="blog-content">
 
 <?php
 if($blog){

@@ -14,6 +14,4 @@ A list is a collection of items that can be of any data type. It's mutable and o
 
 ```python
 my_list = [1, 2, 3, 'hello', True]
-
 ```
-
