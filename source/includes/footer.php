@@ -1,5 +1,5 @@
 <footer>
-<span>Blogga &copy;&nbsp;<?= date('Y') ?> </span>
+    <span>Blogga &copy;&nbsp;<?= date('Y') ?> </span>
 </footer>
 </body>
-<html> 
+<html>
